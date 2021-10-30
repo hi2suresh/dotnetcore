@@ -8,6 +8,7 @@ namespace OdeToFoodCopy.Data
     public interface IRestaurentData
     {
         IEnumerable<Restaurant> GetRestaurantsByName(string name);
+        Restaurant GetRestaurantById(int restaurantId);
     }
 
     public class InMemoryRestaurantData : IRestaurentData
@@ -23,6 +24,12 @@ namespace OdeToFoodCopy.Data
                 new Restaurant { Id = 3, Name = "La Costa", Location = "California", Cuisine=CuisineType.Mexican}
             };
         }
+
+        public Restaurant GetRestaurantById(int restaurantId)
+        {
+            return restaurants.SingleOrDefault(r => r.Id == restaurantId);
+        }
+
         public IEnumerable<Restaurant> GetRestaurantsByName(string name)
         {
             return from r in restaurants

@@ -13,4 +13,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="OdeToFoodCopy.Core\OdeToFoodCopy.Core.csproj" />
+    <ProjectReference Include="OdeToFoodCopy.Data\OdeToFoodCopy.Data.csproj" />
+  </ItemGroup>
+
 </Project>

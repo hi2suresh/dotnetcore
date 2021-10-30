@@ -14,6 +14,8 @@ namespace OdeToFoodCopy.Pages.Restaurants
     {
         private readonly IConfiguration config;
         private readonly IRestaurentData restaurantData;
+        [BindProperty(SupportsGet =true)]
+        public string SearchTerm { get; set; }
 
         public string Message { get; set; }
         public IEnumerable<Restaurant> Restaurants { get; set; }
@@ -22,10 +24,10 @@ namespace OdeToFoodCopy.Pages.Restaurants
             this.config = config;
             this.restaurantData = restaurentData;
         }
-        public void OnGet(string searchTerm)
+        public void OnGet()
         {
             Message = config["Message"];
-            Restaurants = restaurantData.GetRestaurantsByName(searchTerm);
+            Restaurants = restaurantData.GetRestaurantsByName(SearchTerm);
         }
     }
 }
