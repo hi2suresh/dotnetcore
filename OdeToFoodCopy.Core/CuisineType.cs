@@ -1,9 +1,9 @@
 ﻿namespace OdeToFoodCopy.Core
 {
-    public enum CusineType
+    public enum CuisineType
     {
         none,
-        Mexcian,
+        Mexican,
         Italian,
         Indian
     }

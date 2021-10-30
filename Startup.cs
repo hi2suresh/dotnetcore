@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OdeToFoodCopy.Data;
 
 namespace OdeToFoodCopy
 {
@@ -25,6 +26,7 @@ namespace OdeToFoodCopy
         {
             services.AddRazorPages();
             services.AddMvc().AddRazorRuntimeCompilation();
+            services.AddSingleton<IRestaurentData, InMemoryRestaurantData>();
 
         }
 
