@@ -7,6 +7,20 @@
 @Model.Message
 <h2>Suresh Learning dotnet core</h2>
 
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control"
+                  value="" name="searchTerm" />
+           
+                <button class="btn btn-danger">
+                    <i class="fas fa-search"></i>
+                </button>
+           
+        </div>
+    </div>
+</form>
+
 <table class="table">
     @foreach (var restaurant in Model.Restaurants)
     {
